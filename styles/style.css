@@ -1,0 +1,163 @@
+.section {
+	width: 1400px;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	padding: 16px 3px 16px 24px;
+	align-items: center;
+	gap: 32px;
+	align-self: stretch;
+	background-color: #6725a8;
+}
+
+.header__navigation {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+}
+
+.header__menu {
+	background: none;
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.45);
+	padding: 12px 10px;
+}
+
+.header__logo {
+	display: flex;
+	justify-content: center;
+}
+
+.header__logo-text {
+	color: white;
+	width: 107px; /* В макете 106px */
+	font-family: Segoe UI, sans-serif;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 24px;
+	font-variant: all-small-caps;
+	letter-spacing: 0.56px;
+}
+
+.header__search {
+	border-radius: 36px;
+	background: rgba(255, 255, 255, 0.2);
+	display: flex;
+	justify-content: space-between;
+	height: 48px;
+	padding: 0px 20px;
+	align-items: center;
+	flex: 1 0 0;
+}
+
+.header__input {
+	width: 100%;
+	background: none;
+	border: 0;
+	font-family: Segoe UI, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	color: #fff;
+}
+
+.header__input:focus {
+	outline: none;
+}
+
+.header__input::-webkit-input-placeholder {
+	color: #fff;
+	opacity: 0.5;
+}
+
+.header__search-icon {
+	width: 24px;
+	height: 24px;
+	opacity: 0.4;
+	cursor: pointer;
+}
+
+.header__user-bar {
+	padding-right: 0px;
+	align-self: stretch;
+}
+
+.header__user-list {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 40px;
+	list-style-type: none;
+}
+
+.header__user-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.user-item__icon_notification::before {
+	content: '3';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: -5px;
+	right: 0;
+	transform: rotate(0.074deg);
+	padding: 0px 2px 2px 2px;
+	color: #fff;
+	text-align: center;
+	font-family: Segoe UI;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 18px;
+	border-radius: 16px;
+	background-color: #f55123;
+}
+
+.user-item__icon {
+	width: 28px;
+	height: 28px;
+}
+
+.user-item__text {
+	color: white;
+	font-family: Segoe UI, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+.main {
+	background-color: #6725a8;
+	display: flex;
+}
+
+.content {
+	flex: 1 0 0;
+	background-color: #fff;
+	border-radius: 24px;
+}
+
+.footer {
+	background-color: #6725a8;
+	padding: 24px;
+	text-align: center;
+}
+
+.footer__text {
+	color: rgba(255, 255, 255, 0.7);
+	font-family: Segoe UI;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+}
