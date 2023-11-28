@@ -28,26 +28,766 @@
     <div class="header__user-bar">
       <ul class="header__user-list">
         <li class="header__user-item">
-          <!-- Мб обернуть в кнопку -->
           <img src="images/header/user-icon.svg" alt="user" class='user-item__icon'>
-          <p class="user-item__text"> <!-- Мб стоит переименовать по бэм -->
+          <p class="user-item__text">
             Профиль
           </p>
         </li>
         <li class="header__user-item">
           <!-- Мб обернуть в кнопку -->
-          <div class="user-item__icon_notification"></div>
+          <div class="user-item__icon_notification">3</div>
           <img src="images/header/cart-icon.svg" alt="cart" class='user-item__icon'>
-          <p class="user-item__text"> <!-- Мб стоит переименовать по бэм -->
+          <p class="user-item__text">
             Корзина
           </p>
         </li>
       </ul>
     </div>
   </header>
-  <main class="main section">
-    <div class="content">
+  <main class="main">
+    <div class="content section">
+      <section class="content__cart">
+        <section class="cart">
+          <h1 class="content__title">
+            Корзина
+          </h1>
+          <div class="content__select-all">
+            <input type="checkbox" id="select-all" name="select-all" checked class='checkbox'>
+            <label class='content__select-text'>Выбрать все</label>
+            <img src="images/cart/icon-arrow.svg" alt="sort" class="content__sorting-button accordion">
+          </div>
 
+          <div class="content__products">
+            <div class="content__product">
+              <a class="content__product-info">
+                <div class="product__image-with-selector">
+                  <input type="checkbox" id="scales" name="scales" checked class='checkbox'>
+                  <img src="images/products/product-1.png" alt="product-1" class="product__image">
+                </div>
+                <div class="product__description">
+                  <div>
+                    <div class="product__price_phone">
+                      <span class="product__price-text_phone">522 сом</span>
+                      <span class="product__price-discount_phone">1051 сом</span>
+                    </div>
+
+                    <p class="product__name">
+                      Футболка UZcotton мужская
+                    </p>
+                  </div>
+                  <p class="product__variations">
+                    <span class="product__variation">Цвет: белый</span> <span
+                      class="product__variation mobile-hide">Размер:</span><span id='size'>56</span>
+                  </p>
+                  <div class="location">
+                    <p class="product__location">
+                      Коледино WB
+                    </p>
+                    <p class="product__vendor">
+                      OOO Вайлдберриз
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <div class="product__actions">
+                <div class="product__amount-actions">
+                  <button class="product__button">
+                    &ndash;
+                  </button>
+                  <span class="product__amount">
+                    1
+                  </span>
+                  <button class="product__button product__button_active">
+                    +
+                  </button>
+                </div>
+                <p class="product__left">
+                  Осталось 2 шт.
+                </p>
+                <ul class="product__actions-list">
+                  <li class="product__actions-item">
+                    <button class="product__button">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon-20">
+                          <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                            fill="black" />
+                        </g>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="product__actions-item">
+                    <button class="product__button">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon-20">
+                          <g id="Vector">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                              fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                              fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                              fill="black" />
+                          </g>
+                        </g>
+                      </svg>
+
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="content__price">
+                <div>
+                  <span class="product__current-price">
+                    522
+                  </span><span class="currency"> сом</span>
+                </div>
+                <span class="product__old-price">
+                  1051 сом
+                </span>
+              </div>
+            </div>
+            <div class="content__product">
+              <a class="content__product-info">
+                <div class="product__image-with-selector">
+                  <input type="checkbox" id="product-2" name="product-2" checked class='checkbox'>
+                  <img src="images/products/product-2.png" alt="product-2" class="product__image">
+                </div>
+                <div class="product__description">
+                  <div>
+                    <div class="product__price_phone">
+                      <span class="product__price-text_phone">2 100 047 <span class="currency">сом</span></span>
+                      <span class="product__price-discount_phone">2 300 047 сом</span>
+                    </div>
+                    <p class="product__name">
+                      Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR,
+                      MobiSafe
+                    </p>
+                  </div>
+                  <p class="product__variations">
+                    <span class="product__variation">Цвет: прозрачный</span>
+                  </p>
+                  <div class="location">
+                    <p class="product__location">
+                      Коледино WB
+                    </p>
+                    <p class="product__vendor">
+                      OOO Мегапрофстиль
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <div class="product__actions">
+                <div class="product__amount-actions">
+                  <button class="product__button product__button_active">
+                    &ndash;
+                  </button>
+                  <span class="product__amount">
+                    200
+                  </span>
+                  <button class="product__button product__button_active">
+                    +
+                  </button>
+                </div>
+                <p class="product__left"> &nbsp;
+                </p>
+                <ul class="product__actions-list">
+                  <li class="product__actions-item">
+                    <button class="product__button">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon-20">
+                          <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                            fill="black" />
+                        </g>
+                      </svg>
+
+                    </button>
+                  </li>
+                  <li class="product__actions-item">
+                    <button class="product__button">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon-20">
+                          <g id="Vector">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                              fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                              fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                              fill="black" />
+                          </g>
+                        </g>
+                      </svg>
+
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="content__price">
+                <div>
+                  <span class="product__current-price price-small">
+                    2 100 047
+                  </span><span class="currency"> сом</span>
+                </div>
+                <div>
+                  <span class="product__old-price">
+                    2 300 047 сом</span>
+                </div>
+              </div>
+            </div>
+            <div class="content__product">
+              <a class="content__product-info">
+                <div class="product__image-with-selector">
+                  <input type="checkbox" id="scales" name="scales" checked class='checkbox'>
+                  <img src="images/products/product-3.png" alt="product-3" class="product__image">
+                </div>
+                <div class="product__description">
+                  <div>
+                    <div class="product__price_phone">
+                      <span class="product__price-text_phone">494 сом</span>
+                      <span class="product__price-discount_phone">950 сом</span>
+                    </div>
+                    <p class="product__name">
+                      Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell
+                    </p>
+                  </div>
+                  <div class="location">
+                    <p class="product__location">
+                      Коледино WB
+                    </p>
+                    <p class="product__vendor">
+                      OOO Вайлдберриз
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <div class="product__actions">
+                <div class="product__amount-actions">
+                  <button class="product__button product__button_active">
+                    &ndash;
+                  </button>
+                  <span class="product__amount">
+                    2
+                  </span>
+                  <button class="product__button">
+                    +
+                  </button>
+                </div>
+                <p class="product__left">
+                  Осталось 2 шт.
+                </p>
+                <ul class="product__actions-list">
+                  <li class="product__actions-item">
+                    <button class="product__button">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon-20">
+                          <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                            fill="black" />
+                        </g>
+                      </svg>
+
+                    </button>
+                  </li>
+                  <li class="product__actions-item">
+                    <button class="product__button">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon-20">
+                          <g id="Vector">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                              fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                              fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                              fill="black" />
+                          </g>
+                        </g>
+                      </svg>
+
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="content__price">
+                <div>
+                  <span class="product__current-price">
+                    494
+                  </span><span class="currency"> сом</span>
+                </div>
+                <div>
+                  <span class="product__old-price">
+                    950 сом</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="content__not-available">
+          <div class="content__not-available-head">
+            <h2 class="content__not-available-title">
+              Отсутствуют · 3 товара
+            </h2>
+            <img src="images/cart/icon-arrow.svg" alt="sort" class="content__sorting-button accordion">
+          </div>
+          <div class="content__products">
+            <div class="content__product">
+              <a class="content__product-info">
+                <img src="images/products/product-1.png" alt="product-1-out" class="product__image product-out">
+                <div class="product__description">
+                  <p class="product__name">
+                    Футболка UZcotton мужская
+                  </p>
+                  <p class="product__variations">
+                    <span class="product__variation">Цвет: белый</span> <span
+                      class="product__variation mobile-hide">Размер:</span><span id='size'>56</span>
+                  </p>
+                </div>
+              </a>
+              <div class="product__actions">
+                <div class="product__amount-actions">
+                  <button class="product__button">
+                    &ndash;
+                  </button>
+                  <span class="product__amount">
+                    1
+                  </span>
+                  <button class="product__button product__button_active">
+                    +
+                  </button>
+                </div>
+                <p class="product__left">
+                  Осталось 2 шт.
+                </p>
+                <ul class="product__actions-list">
+                  <li class="product__actions-item">
+                    <button class="product__button">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon-20">
+                          <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                            fill="black" />
+                        </g>
+                      </svg>
+
+                    </button>
+                  </li>
+                  <li class="product__actions-item">
+                    <button class="product__button">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon-20">
+                          <g id="Vector">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                              fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                              fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                              fill="black" />
+                          </g>
+                        </g>
+                      </svg>
+
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="content__price">
+                <span class="product__current-price">
+                  522 <span class="currency">сом</span>
+                </span>
+                <span class="product__old-price">
+                  1051 <span class="currency">сом</span>
+                </span>
+              </div>
+            </div>
+            <div class="content__product">
+              <a class="content__product-info">
+                <img src="images/products/product-2.png" alt="product-2-out" class="product__image product-out">
+                <div class="product__description">
+                  <p class="product__name">
+                    Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR,
+                    MobiSafe
+                  </p>
+                  <p class="product__variations">
+                    <span class="product__variation">Цвет: прозрачный</span>
+                  </p>
+                </div>
+              </a>
+              <div class="product__actions">
+                <div class="product__amount-actions">
+                  <button class="product__button product__button_active">
+                    &ndash;
+                  </button>
+                  <span class="product__amount">
+                    200
+                  </span>
+                  <button class="product__button product__button_active">
+                    +
+                  </button>
+                </div>
+                <p class="product__left">&nbsp;
+                </p>
+                <ul class="product__actions-list">
+                  <li class="product__actions-item">
+                    <button class="product__button">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon-20">
+                          <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                            fill="black" />
+                        </g>
+                      </svg>
+
+                    </button>
+                  </li>
+                  <li class="product__actions-item">
+                    <button class="product__button">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon-20">
+                          <g id="Vector">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                              fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                              fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                              fill="black" />
+                          </g>
+                        </g>
+                      </svg>
+
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="content__price">
+                <span class="product__current-price product__current-price_big">
+                  2 100 047 <span class="currency">сом</span>
+                </span>
+                <span class="product__old-price">
+                  2 300 047 сом
+                </span>
+              </div>
+            </div>
+            <div class="content__product">
+              <a class="content__product-info">
+                <img src="images/products/product-3.png" alt="product-3-out" class="product__image product-out">
+                <div class="product__description">
+                  <p class="product__name">
+                    Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell
+                  </p>
+                </div>
+              </a>
+              <div class="product__actions">
+                <div class="product__amount-actions">
+                  <button class="product__button product__button_active">
+                    &ndash;
+                  </button>
+                  <span class="product__amount">
+                    2
+                  </span>
+                  <button class="product__button">
+                    +
+                  </button>
+                </div>
+                <p class="product__left">
+                  Осталось 2 шт.
+                </p>
+                <ul class="product__actions-list">
+                  <li class="product__actions-item">
+                    <button class="product__button">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon-20">
+                          <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                            fill="black" />
+                        </g>
+                      </svg>
+
+                    </button>
+                  </li>
+                  <li class="product__actions-item">
+                    <button class="product__button">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon-20">
+                          <g id="Vector">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                              fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                              fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                              fill="black" />
+                          </g>
+                        </g>
+                      </svg>
+
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="content__price">
+                <span class="product__current-price">
+                  494 <span class="currency">сом</span>
+                </span>
+                <span class="product__old-price">
+                  950 <span class="currency">сом</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="registration">
+          <section class="delivery">
+            <div class="delivery__title">
+              <h2 class="delivery__title-text">
+                Способ доставки
+              </h2>
+              <button class="delivery__button edit-button">
+                Изменить
+              </button>
+            </div>
+            <div class="delivery__details">
+              <h3 class="delivery__detail-title">
+                Пункт выдачи
+              </h3>
+              <div class="delivery__detail-info">
+                <address class="delivery__detail-address">
+                  Бишкек, улица Ахматбека Суюмбаева, 12/1
+                </address>
+                <div class="delivery__address-info">
+                  <img src="images/registration/star.svg" alt="star" class="delivery__rating">
+                  <p>4.99</p>
+                  <p>Ежедневно с 10 до 21</p>
+                </div>
+              </div>
+              <h3 class="delivery__detail-title">
+                Стоимость доставки
+              </h3>
+              <div class="delivery__detail-info">
+                <p>Бесплатно</p>
+              </div>
+              <h3 class="delivery__detail-title">
+                5—6 февраля
+              </h3>
+              <div class="delivery__detail-info">
+                <div class="delivery__products">
+                  <div class="delivery__shipping-info">
+                    <img src="images/products/product-1.png" alt="product-1" class="delivery__product">
+                  </div>
+                  <div class="delivery__shipping-info">
+                    <img src="images/products/product-2.png" alt="product-1" class="delivery__product">
+                    <div class="delivery__shipping-label">184</div>
+                  </div>
+                  <div class="delivery__shipping-info">
+                    <img src="images/products/product-3.png" alt="product-1" class="delivery__product">
+                    <div class="delivery__shipping-label">2</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="delivery__detail-title">
+                7—8 февраля
+              </h3>
+              <div class="delivery__detail-info">
+                <div class="delivery__products">
+                  <div class="delivery__shipping-info">
+                    <img src="images/products/product-2.png" alt="" class="delivery__product">
+                    <div class="delivery__shipping-label">16</div>
+                  </div>
+                </div>
+              </div>
+              <div class="delivery__hint delivery__hint_big">
+                <img src="images/order/price shipping.svg" alt="price-shipping" class="delivery__hint-img">
+                <div class="delivery__hint-text">
+                  Обратная доставка товаров на склад при отказе — <span class='text-green'>бесплатно<p
+                      class="delivery__detail-tooltip">
+                      Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно
+                    </p></span>
+
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="cart-payment">
+            <!-- Вывести в общий класс и переименовать по бэм -->
+            <div class="delivery__title">
+              <h2 class="delivery__title-text">
+                Способ оплаты
+              </h2>
+              <button id='payment-method-button' class="delivery__button edit-button">
+                Изменить
+              </button>
+            </div>
+            <div class="payment__card-info payment__card-info-cart">
+              <img src="images/order/mir.svg" alt="mir" class="payment__bank-icon">
+              <span class="payment__card-number payment__card-number_big">
+                1234 12•• •••• 1234
+              </span>
+              <span class="cart__payment-method-expiry payment__card-number_big">01/30</span>
+            </div>
+            <span class="cart__payment-text">Спишем оплату с карты при получении</span>
+          </section>
+          <section class="cart-form">
+            <h2 class="cart-form__title">Получатель</h2>
+            <form action="#" class="cart-form__form">
+              <div class="cart-form__line">
+                <div class="cart-form__input-form">
+                  <label>
+                    <input type="text" id="name" class='cart-form__input' placeholder='&nbsp;' required>
+                    <span class="cart-form__placeholder">Имя</span>
+                    <span class='cart-form__error hidden'>Введите имя</span>
+                  </label>
+                </div>
+                <div class="cart-form__input-form">
+                  <label>
+                    <input type="text" id="name" class='cart-form__input' placeholder='&nbsp;' required>
+                    <span class="cart-form__placeholder">Фамилия</span>
+                    <span class='cart-form__error hidden'>Введите фамилию</span>
+                  </label>
+                </div>
+              </div>
+              <div class="cart-form__line">
+                <div class="cart-form__input-form">
+                  <label>
+                    <input type="text" id="email" class='cart-form__input' placeholder='&nbsp;' required>
+                    <span class="cart-form__placeholder">Электронная почта</span>
+                    <span class='cart-form__error hidden'>Проверьте адрес электронной почты</span>
+                  </label>
+                </div>
+                <div class="cart-form__input-form">
+                  <label>
+                    <input type="number" id="mobile" class='cart-form__input' placeholder='&nbsp;' maxlength="30"
+                      required>
+                    <span class="cart-form__placeholder">Телефон</span>
+                    <span class='cart-form__error hidden'>Формат: +9 999 99 99</span>
+                  </label>
+                </div>
+                <div class="cart-form__input-form">
+                  <label>
+                    <input type="number" id="inn" class='cart-form__input' placeholder='&nbsp;' required>
+                    <span class="cart-form__placeholder">ИНН</span>
+                    <span class='cart-form__error'>Для таможенного оформления</span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </section>
+        </section>
+      </section>
+      <aside class="sidebar">
+        <section class="order">
+          <div class="order__result">
+            <h2 class="order__total">
+              <span>
+                Итого
+              </span>
+              <div>
+                <span id="totalPrice">
+                  2 101 063
+                </span><span class='order__total-currency'> сом</span>
+              </div>
+            </h2>
+            <div class="order__explains">
+              <div class="order__explain" id='discount'>
+                <span>
+                  203 товара
+                </span>
+                <span>
+                  2 302 048 сом
+                </span>
+              </div>
+              <div class="order__explain">
+                <span>
+                  Скидка
+                </span>
+                <span id='discountValue'>
+                  −200 985 сом
+                </span>
+              </div>
+              <div class="order__explain">
+                <span>
+                  Доставка
+                </span>
+                <span>
+                  Бесплатно
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="order__delivery">
+            <div class="order__detail">
+              <h3 class="order__detail-title">
+                Доставка в пункт выдачи
+              </h3>
+              <img src="images/order/edit-icon.svg" alt="edit" class="order__detail-img">
+            </div>
+            <address class="delivery__address">
+              Бишкек, улица Ахматбека Суюмбаева, 12/1
+            </address>
+            <time class="delivery__date">
+              5–8 фев
+            </time>
+            <div class="delivery__hint">
+              <img src="images/order/price shipping.svg" alt="price-shipping" class="delivery__hint-img">
+              <div class="delivery__hint-text">
+                Обратная доставка товаров на склад при отказе — <span class='text-green'>бесплатно<p
+                    class="delivery__detail-tooltip">
+                    Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно
+                  </p></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="order__payment">
+            <div class="payment__method">
+              <div class="order__detail">
+                <h3 class="order__detail-title">
+                  Оплата картой
+                </h3>
+                <img src="images/order/edit-icon.svg" alt="edit" class="order__detail-img"
+                  id='alternate-payment-button'>
+              </div>
+              <div class="payment__card-info mobile-hide">
+                <img src="images/order/mir.svg" alt="mir" class="payment__bank-icon">
+                <span class="payment__card-number">
+                  1234 12•• •••• 1234
+                </span>
+              </div>
+            </div>
+            <div class="payment__instant-apply">
+              <input type="checkbox" id="instant-apply" name="instant-apply" class='checkbox'>
+              <label for="instant-apply" class='payment__instant-apply-text'>Списать оплату сразу</label>
+              <p class='payment__instant-hint'>Спишем оплату с карты при получении</p>
+            </div>
+          </div>
+          <div class="order__finish">
+            <button class="order__confirm">
+              Заказать
+            </button>
+            <div class="order__usage-apply">
+              <img src="images/order/apply.svg" alt="apply" class="order__usage-apply-image">
+              <p class="order__usage-apply-text">
+                Соглашаюсь <a href="#0">с правилами пользования торговой площадкой</a> и <a href="#0">возврата</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </aside>
     </div>
   </main>
   <footer class='footer section'>
@@ -55,6 +795,251 @@
       © 2022 ООО «Товары и точка»
     </p>
   </footer>
+  <nav class="mobile-navigation">
+    <ul class="mobile-navigation__list">
+      <li class="mobile-navigation__item">
+        <a href="#0" class="mobile-navigation__link">
+          <img src="./images/mobile-navigation/main.svg" alt="main" class="mobile-navigation__image">
+        </a>
+      </li>
+      <li class="mobile-navigation__item">
+        <a href="#0" class="mobile-navigation__link">
+          <img src="./images/mobile-navigation/catalog.svg" alt="catalog" class="mobile-navigation__image">
+        </a>
+      </li>
+      <li class="mobile-navigation__item">
+        <a href="#0" class="mobile-navigation__link">
+          <img src="./images/mobile-navigation/cart.svg" alt="cart" class="mobile-navigation__image">
+          <div class="user-item__icon_notification">3</div>
+        </a>
+      </li>
+      <li class="mobile-navigation__item">
+        <a href="#0" class="mobile-navigation__link">
+          <img src="./images/mobile-navigation/favorites.svg" alt="favorites" class="mobile-navigation__image">
+        </a>
+      </li>
+      <li class="mobile-navigation__item">
+        <a href="#0" class="mobile-navigation__link">
+          <img src="./images/mobile-navigation/profile.svg" alt="profile" class="mobile-navigation__image">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <dialog class="delivery-dialog dialog" id="delivery-modal">
+    <div class='dialog__content'>
+      <div class="dialog__title">
+        <h2 class="dialog__title-text">
+          Способ доставки
+        </h2>
+        <button class="dialog__close">
+          <img src="./images/dialog/search-close.svg" alt="close" class="dialog__close-image">
+        </button>
+      </div>
+      <div class="delivery__selectors">
+        <button class="delivery__selector-button delivery__selector-button_active">
+          В пункт выдачи
+        </button>
+        <button class="delivery__selector-button">
+          Курьером
+        </button>
+      </div>
+      <form action="" class='delivery-dialog__form courier-form'>
+        <h3 class="delivery-dialog__addresses-title">
+          Мои адреса
+        </h3>
+        <label class='delivery-dialog__address'>
+          <input name='address' class='round' type="radio">
+          <span class='delivery-dialog__address-text'>Бишкек, улица Табышалиева, 57</span>
+          <button class="product__button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="icon-20">
+                <g id="Vector">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                    fill="black" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                    fill="black" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                    fill="black" />
+                </g>
+              </g>
+            </svg>
+          </button>
+        </label>
+        <label class='delivery-dialog__address'>
+          <input name='address' class='round' type="radio">
+          <span class='delivery-dialog__address-text'>Бишкек, улица Жукеева-Пудовкина, 77/1</span>
+          <button class="product__button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="icon-20">
+                <g id="Vector">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                    fill="black" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                    fill="black" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                    fill="black" />
+                </g>
+              </g>
+            </svg>
+          </button>
+        </label>
+        <label class='delivery-dialog__address'>
+          <input name='address' class='round' type="radio">
+          <span class='delivery-dialog__address-text'>Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</span>
+          <button class="product__button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="icon-20">
+                <g id="Vector">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                    fill="black" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                    fill="black" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                    fill="black" />
+                </g>
+              </g>
+            </svg>
+          </button>
+        </label>
+      </form>
+      <form action="" class='delivery-dialog__form shipment-form'>
+        <h3 class="delivery-dialog__addresses-title">
+          Мои адреса
+        </h3>
+        <label class='delivery-dialog__address'>
+          <input name='address' class='round' type="radio">
+          <div class='delivery-dialog__shipment-address'> <span class='delivery-dialog__address-text'>г. Бишкек,
+              микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
+            <div class='shipment-rating'><img src="images/dialog/star_fill.svg" alt="star" class='shipment-image'> <span
+                class="shipment-rating-value">4.99</span><span class='shipment-rating-text'>Пункт выдачи</span>
+            </div>
+          </div>
+          <button class="product__button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="icon-20">
+                <g id="Vector">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                    fill="black" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                    fill="black" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                    fill="black" />
+                </g>
+              </g>
+            </svg>
+          </button>
+        </label>
+        <label class='delivery-dialog__address'>
+          <input name='address' class='round' type="radio">
+          <div class='delivery-dialog__shipment-address'> <span class='delivery-dialog__address-text'>г. Бишкек,
+              микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
+            <div class='shipment-rating'><img src="images/dialog/star_fill.svg" alt="star" class='shipment-image'><span
+                class="shipment-rating-value">4.99</span><span class='shipment-rating-text'>Пункт выдачи</span>
+            </div>
+          </div>
+          <button class="product__button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="icon-20">
+                <g id="Vector">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                    fill="black" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                    fill="black" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                    fill="black" />
+                </g>
+              </g>
+            </svg>
+          </button>
+        </label>
+        <label class='delivery-dialog__address'>
+          <input name='address' class='round' type="radio">
+          <div class='delivery-dialog__shipment-address'> <span class='delivery-dialog__address-text'>г. Бишкек, улица
+              Табышалиева, д. 57</span>
+            <div class='shipment-rating'><img src="images/dialog/star_fill.svg" alt="star" class='shipment-image'><span
+                class="shipment-rating-value">4.99</span><span class='shipment-rating-text'>Пункт выдачи</span>
+            </div>
+          </div>
+          <button class="product__button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="icon-20">
+                <g id="Vector">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                    fill="black" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                    fill="black" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                    fill="black" />
+                </g>
+              </g>
+            </svg>
+          </button>
+        </label>
+      </form>
+      <button id='delivery-modal-button' class="order__confirm dialog__button">
+        Заказать
+      </button>
+    </div>
+  </dialog>
+
+  <dialog class="delivery-dialog dialog" id="payment-methods">
+    <div class='dialog__content'>
+      <div class="dialog__title">
+        <h2 class="dialog__title-text">
+          Способ оплаты
+        </h2>
+        <button class="dialog__close">
+          <img src="./images/dialog/search-close.svg" alt="close" class="dialog__close-image payment-methods-close">
+        </button>
+      </div>
+      <div class="payment__methods">
+        <label class='delivery-dialog__address'>
+          <input name='card' class='round' type="radio">
+          <img src="images/dialog/Frame 277132129.png" alt="mir" class="payment-method-image">
+          <span class='delivery-dialog__address-text'>1234 56•• •••• 1234</span>
+        </label>
+        <label class='delivery-dialog__address'>
+          <input name='card' class='round' type="radio">
+          <img src="images/dialog/Frame 277132129-1.png" alt="mir" class="payment-method-image">
+          <span class='delivery-dialog__address-text'>1234 56•• •••• 1234</span>
+        </label>
+        <label class='delivery-dialog__address'>
+          <input name='card' class='round' type="radio">
+          <img src="images/dialog/Frame 277132129-2.png" alt="mir" class="payment-method-image">
+          <span class='delivery-dialog__address-text'>1234 56•• •••• 1234</span>
+        </label>
+        <label class='delivery-dialog__address'>
+          <input name='card' class='round' type="radio">
+          <img src="images/dialog/Frame 277132129-3.png" alt="mir" class="payment-method-image">
+          <span class='delivery-dialog__address-text'>1234 56•• •••• 1234</span>
+        </label>
+      </div>
+      <button id='delivery-modal-button' class="order__confirm dialog__button">
+        Выбрать
+      </button>
+    </div>
+  </dialog>
+
+  <script src="./script/index.js"></script>
 </body>
 
 </html>
